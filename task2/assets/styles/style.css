@@ -1,0 +1,715 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+h1,
+h2 {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+}
+
+body {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+}
+
+@media screen and (min-width: 1024px) {
+  .gridContainer-1 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, max-content)) 20% 1fr;
+    grid-template-rows: max-content;
+    width: 100vw;
+    max-width: 100%;
+    margin: 20px;
+    row-gap: 30px;
+    align-items: center;
+  }
+  .gridContainer-1 .logoImage {
+    grid-column: 1/2;
+    grid-row: 1/1;
+  }
+  .gridContainer-1 .logoText {
+    grid-column: 2/3;
+    grid-row: 1/1;
+    align-self: center;
+    font-weight: bold;
+  }
+  .gridContainer-1 .navigation {
+    grid-column: 4/5;
+    grid-row: 1/1;
+  }
+  .gridContainer-1 .navGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, max-content);
+    grid-template-rows: max-content;
+    list-style-type: none;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .gridContainer-1 .navPoint1 {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    height: 100%;
+  }
+  .gridContainer-1 .navPoint2 {
+    grid-column: 2/3;
+    grid-row: 1/1;
+    justify-self: center;
+  }
+  .gridContainer-1 .navPoint3 {
+    grid-column: 3/4;
+    grid-row: 1/1;
+    justify-self: center;
+  }
+  .gridContainer-1 .navPoint4 {
+    grid-column: 4/5;
+    grid-row: 1/1;
+  }
+  .navLink {
+    text-decoration: none;
+    color: black;
+  }
+  #earlyAccess {
+    color: green;
+  }
+  .gridContainer-2 {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    row-gap: 30px;
+  }
+  .header1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .paragraph1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: start;
+    text-align: center;
+  }
+  .buttonAccess {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: start;
+    justify-self: center;
+  }
+  .button1 {
+    border-radius: 8px;
+    padding: 20px 24px;
+    width: 100%;
+    height: 100%;
+    background: #71a894;
+    color: #f9f9f9;
+    text-align: center;
+    border-color: #71a894;
+  }
+  .image1 {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    width: 90%;
+    max-width: 100%;
+  }
+  .gridContainer-3 {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content minmax(min-content, max-content) 1fr;
+    justify-items: center;
+    align-items: center;
+    row-gap: 30px;
+    margin-bottom: 50px;
+  }
+  .header2 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  .paragraph2 {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    text-align: center;
+  }
+  .imageCard1 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    max-width: 100%;
+  }
+  .imageCard2 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    max-width: 100%;
+  }
+  .imageCard3 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    max-width: 100%;
+  }
+  .gridContainer-4 {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 30px;
+    margin-bottom: 50px;
+  }
+  .header3 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .paragraph3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: start;
+    text-align: center;
+  }
+  .imageWidget {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    max-width: 100%;
+  }
+  .header4 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .paragraph4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: start;
+    text-align: center;
+  }
+  .imageProposal {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    max-width: 100%;
+  }
+  .footerGrid {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: minmax(min-content, max-content) 30% minmax(min-content, max-content);
+    grid-template-rows: max-content;
+    margin: 20px;
+  }
+  .companyName {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-weight: bold;
+  }
+  .footerNavigation {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .navGrid1 {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: repeat(4, max-content);
+    grid-template-rows: max-content;
+    list-style-type: none;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .footerNav1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .footerNav2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .footerNav3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .footerNav4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .gridContainer-1 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, max-content)) 0 1fr;
+    grid-template-rows: max-content;
+    width: 100vw;
+    max-width: 100%;
+    margin: 10px;
+    row-gap: 30px;
+    align-items: center;
+  }
+  .gridContainer-1 .logoImage {
+    grid-column: 1/2;
+    grid-row: 1/1;
+  }
+  .gridContainer-1 .logoText {
+    grid-column: 2/3;
+    grid-row: 1/1;
+    align-self: center;
+    font-weight: bold;
+  }
+  .gridContainer-1 .navigation {
+    grid-column: 4/5;
+    grid-row: 1/1;
+  }
+  .gridContainer-1 .navGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, max-content);
+    grid-template-rows: max-content;
+    list-style-type: none;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  .gridContainer-1 .navPoint1 {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    height: 100%;
+  }
+  .gridContainer-1 .navPoint2 {
+    grid-column: 2/3;
+    grid-row: 1/1;
+    justify-self: center;
+  }
+  .gridContainer-1 .navPoint3 {
+    grid-column: 3/4;
+    grid-row: 1/1;
+    justify-self: center;
+  }
+  .gridContainer-1 .navPoint4 {
+    grid-column: 4/5;
+    grid-row: 1/1;
+  }
+  .navLink {
+    text-decoration: none;
+    color: black;
+  }
+  #earlyAccess {
+    color: green;
+  }
+  .gridContainer-2 {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    row-gap: 30px;
+  }
+  .header1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .paragraph1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: start;
+    text-align: center;
+  }
+  .buttonAccess {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: start;
+    justify-self: center;
+  }
+  .button1 {
+    border-radius: 8px;
+    padding: 20px 24px;
+    width: 100%;
+    height: 100%;
+    background: #71a894;
+    color: #f9f9f9;
+    text-align: center;
+    border-color: #71a894;
+  }
+  .image1 {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    width: 90%;
+    max-width: 100%;
+  }
+  .gridContainer-3 {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content minmax(min-content, max-content) 1fr;
+    justify-items: center;
+    align-items: center;
+    row-gap: 30px;
+    margin-bottom: 50px;
+  }
+  .header2 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  .paragraph2 {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    text-align: center;
+  }
+  .imageCard1 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    max-width: 100%;
+  }
+  .imageCard2 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    max-width: 100%;
+  }
+  .imageCard3 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    max-width: 100%;
+  }
+  .gridContainer-4 {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 30px;
+    margin-bottom: 50px;
+  }
+  .header3 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .paragraph3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    align-self: start;
+    text-align: center;
+  }
+  .imageWidget {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    max-width: 100%;
+  }
+  .header4 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .paragraph4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: start;
+    text-align: center;
+  }
+  .imageProposal {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    max-width: 100%;
+  }
+  .footerGrid {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: minmax(min-content, max-content) 30% minmax(min-content, max-content);
+    grid-template-rows: max-content;
+    margin: 20px;
+  }
+  .companyName {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-weight: bold;
+  }
+  .footerNavigation {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .navGrid1 {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: repeat(4, max-content);
+    grid-template-rows: max-content;
+    list-style-type: none;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .footerNav1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .footerNav2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .footerNav3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .footerNav4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+}
+@media screen and (max-width: 767px) {
+  h1,
+  h2 {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+  }
+  body {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.6em;
+  }
+  .gridContainer-1 {
+    display: grid;
+    grid-template-columns: repeat(2, 15%);
+    grid-template-rows: repeat(2, max-content);
+    width: 100vw;
+    max-width: 100%;
+    margin: 10px;
+    row-gap: 20px;
+    align-items: center;
+  }
+  .gridContainer-1 .logoImage {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 50%;
+    max-width: 100%;
+  }
+  .gridContainer-1 .logoText {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    align-self: center;
+    font-weight: bold;
+  }
+  .gridContainer-1 .navigation {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: grid;
+    justify-items: center;
+  }
+  .gridContainer-1 .navGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, max-content);
+    grid-template-rows: max-content;
+    list-style-type: none;
+    justify-items: center;
+    -moz-column-gap: 5%;
+         column-gap: 5%;
+  }
+  .gridContainer-1 .navPoint1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .gridContainer-1 .navPoint2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .gridContainer-1 .navPoint3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .gridContainer-1 .navPoint4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+  .navLink {
+    text-decoration: none;
+    color: black;
+  }
+  #earlyAccess {
+    color: green;
+  }
+  .gridContainer-2 {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax min-content, max-content);
+    align-items: center;
+    justify-items: center;
+    row-gap: 10px;
+    margin-bottom: 10%;
+  }
+  .header1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .paragraph1 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: start;
+    text-align: center;
+  }
+  .buttonAccess {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    align-self: start;
+    justify-self: center;
+  }
+  .button1 {
+    border-radius: 8px;
+    padding: 10px 14px;
+    width: 100%;
+    height: 100%;
+    background: #71a894;
+    color: #f9f9f9;
+    text-align: center;
+    border-color: #71a894;
+  }
+  .image1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    width: 90%;
+    max-width: 100%;
+  }
+  .gridContainer-3 {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat 5, minmax(min-content, max-content);
+    justify-items: center;
+    align-items: center;
+    row-gap: 30px;
+    margin-bottom: 10%;
+  }
+  .header2 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .paragraph2 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+  }
+  .imageCard1 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 90%;
+    max-width: 100%;
+  }
+  .imageCard2 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    width: 90%;
+    max-width: 100%;
+  }
+  .imageCard3 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    width: 90%;
+    max-width: 100%;
+  }
+  .gridContainer-4 {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax min-content, max-content);
+    justify-items: center;
+    row-gap: 30px;
+    margin-bottom: 10%;
+  }
+  .header3 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .paragraph3 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: start;
+    text-align: center;
+  }
+  .imageWidget {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    max-width: 100%;
+    width: 60%;
+  }
+  .header4 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .paragraph4 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    align-self: start;
+    text-align: center;
+  }
+  .imageProposal {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    max-width: 100%;
+    width: 60%;
+  }
+  .footerGrid {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: minmax(min-content, max-content) 10% minmax(min-content, max-content);
+    grid-template-rows: max-content;
+    margin: 20px;
+  }
+  .companyName {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-weight: bold;
+  }
+  .footerNavigation {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .navGrid1 {
+    display: grid;
+    width: 100vw;
+    max-width: 100%;
+    grid-template-columns: repeat(4, max-content);
+    grid-template-rows: max-content;
+    list-style-type: none;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .footerNav1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .footerNav2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .footerNav3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .footerNav4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+}/*# sourceMappingURL=style.css.map */
